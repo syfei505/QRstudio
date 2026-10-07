@@ -1,0 +1,27 @@
+/* Design tokens: warna, font, bayangan, dan tema gelap.
+   Ubah nilai di sini untuk mengganti identitas visual seluruh website. */
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+  --bg:#EDF0F7; --surface:#FFFFFF; --surface-2:#F4F6FB; --ink:#1A1F44; --muted:#5B6285; --line:#D8DDEC;
+  --cobalt:#2F4BFF; --cobalt-strong:#2238D6; --on-cobalt:#FFFFFF;
+  --lemon:#F2E45C; --on-lemon:#1A1F44; --stage:#2F4BFF;
+  --shadow:0 1px 2px rgba(26,31,68,.06),0 10px 30px rgba(26,31,68,.07);
+  --font-display:"Bricolage Grotesque","Segoe UI",system-ui,-apple-system,sans-serif;
+  --font-body:"Figtree","Segoe UI",system-ui,-apple-system,Roboto,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D1024; --surface:#161A36; --surface-2:#1E2346; --ink:#EDEFFC; --muted:#9BA2C7; --line:#2C3264;
+    --cobalt:#8092FF; --cobalt-strong:#A3B0FF; --on-cobalt:#0D1024; --stage:#2B3CC6;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D1024; --surface:#161A36; --surface-2:#1E2346; --ink:#EDEFFC; --muted:#9BA2C7; --line:#2C3264;
+  --cobalt:#8092FF; --cobalt-strong:#A3B0FF; --on-cobalt:#0D1024; --stage:#2B3CC6;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+}
